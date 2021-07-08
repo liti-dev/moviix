@@ -27,15 +27,16 @@ const Banner = () => {
       className="banner"
       style={{
         backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
         backgroundImage: `url("https://image.tmdb.org/t/p/original${movie?.backdrop_path}")`, //--> ? handles a null value
-        backgroundPosition: "center center",
+        backgroundPosition: "center top",
       }}
     >
       <div className="banner-content">
         <h1 className="banner-title">{movie.title || movie.name}</h1>
         <div className="banner-buttons">
-          <button>Play</button>
-          <button>My List</button>
+          {/* <button>Play</button>
+          <button>My List</button> */}
         </div>
         <h1 className="banner-description">{truncate(movie?.overview, 150)}</h1>
       </div>

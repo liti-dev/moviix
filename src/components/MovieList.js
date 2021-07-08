@@ -7,6 +7,7 @@ const imageUrl = "https://image.tmdb.org/t/p/original/";
 const MovieList = ({ rowTitle, url }) => {
   const [movies, setMovies] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState("");
+  const [isDisplay, setIsDisplay] = useState("no-display");
   useEffect(() => {
     async function fetchData() {
       const request = await fetch(url);
@@ -28,7 +29,8 @@ const MovieList = ({ rowTitle, url }) => {
   };
 
   const handleClick = (movie) => {
-    movieTrailer(movie.title)
+    setIsDisplay("");
+    movieTrailer(movie?.title)
       .then((url) => {
         const urlParams = new URLSearchParams(new URL(url).search);
         setTrailerUrl(urlParams.get("v")); //get() method of URLSearchParams returns the first value associated to the given search parameter
@@ -50,8 +52,9 @@ const MovieList = ({ rowTitle, url }) => {
           ></img>
         ))}
       </div>
-      <YouTube className="" videoId={trailerUrl} opts={opts} />
+      <YouTube className={isDisplay} videoId={trailerUrl} opts={opts} />
     </div>
   );
 };
+
 export default MovieList;
