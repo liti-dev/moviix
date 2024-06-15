@@ -1,18 +1,14 @@
-# Moviix - Trending movies' trailers in one place
+<img src="https://github.com/liti-dev/moviix/assets/78011560/e7fa29f2-f559-4e68-bf81-fbed58df9aa1" width="700"/>
 
+# Moviix 
+## Demo
+Try it [here](https://moviix.netlify.app/)
+## Overview
+Trending and top rated movie trailers in one place, making use of The Movie API.  
+This app was built when I first learned React.
+## Tech Stack
+React, react-bootstrap
 
-
-
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
 
 
